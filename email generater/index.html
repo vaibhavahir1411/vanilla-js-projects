@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1e5c729e, #f3bb7f9b);
+            color: #fff;
+        }
+
+        .container {
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .input input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .input input::placeholder {
+            color: #ddddddf0;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #e2a140c8;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #d29130;
+        }
+
+        #gmail {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Gmail Generater</h1>
+        <div class="input">
+            <input type="text" placeholder="Enter your first name" id="first_name"><br>
+            <input type="text" placeholder="Enter your last name" id="last_name">
+        </div>
+        <button onclick="generate()">generate email</button>
+        <p id="gmail"></p>
+    </div>
+
+
+    <script>
+        function generate() {
+            let first_name = document.getElementById("first_name").value;
+            let last_name = document.getElementById("last_name").value;
+            let full_name = first_name.concat(last_name);
+            let num = Math.floor(Math.random() * 900) + 100;
+            let email = (`${full_name.toLowerCase()}${num}@gmail.com`);
+            document.getElementById("gmail").innerText = (email);
+        }
+
+    </script>
+</body>
+
+</html>
