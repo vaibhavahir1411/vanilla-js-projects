@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            background: linear-gradient(45deg,rgb(212, 212, 212),rgb(244, 242, 242),white);
+            background-repeat: no-repeat;  
+            display: flex;
+            align-items: center;
+            justify-content: center;  
+        }
+        .container{
+            background: linear-gradient(60deg,black,black,rgb(74, 73, 73),black,rgb(0, 0, 0));
+            color: aqua;
+            backdrop-filter: blur(50px);
+            padding: 30px 30px 50px 30px;
+            border: 10px solid gray;
+            border-radius: 20px;
+        }
+        span{
+            font-size: 90px;
+            padding: 15px;
+            letter-spacing: 5px;
+        }
+        span::after{
+            content: '';
+            font-size: 20px;
+            position: absolute;
+            color: white;
+            bottom: 35px;
+        }
+        #hrs::after{
+            content: 'Hours';
+            position: absolute;
+            right: 455px;
+        }
+        #min::after{
+            content: 'Minutes';
+            position: absolute;
+            right: 242px;
+        }
+        #sec::after{
+            content: 'Seconds';
+            position: absolute;
+            right: 45px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="clock">
+            <span id="hrs">00</span>
+            <span>:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
