@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age caculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        
+        .container{
+            background:linear-gradient(45deg,rgb(70, 1, 180),rgb(130, 78, 242),rgb(153, 127, 247),rgb(234, 209, 248));
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100%;
+            padding-top : 10%;;
+            padding-left: 10%;
+        }
+        h1{
+            font-size: 60px;
+            color: rgb(245, 248, 82);
+        }
+        
+        .calculator{
+            background-color: rgba(208, 132, 252, 0.374);
+            display: flex;
+            border-radius: 5px;
+            margin-top: 70px;
+            width: 450px;
+            padding: 20px;
+        }
+        input{
+            width:300px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 0;
+            outline: 0;
+        }
+        button{
+            padding: 10px 20px 10px 20px;
+            margin-left: 15px;
+            font-style: 16px;
+            border-radius: 5px;
+            border: 0;
+            outline: 0;
+            background-color: rgb(245, 248, 82);
+        }
+        button:hover{
+            background-color: rgb(229, 233, 48);
+            transform: scale(1.01);
+            cursor: pointer;
+        }
+        input:hover{
+            transform: scale(1.01);
+            cursor: pointer;
+        }
+        #result{
+            color: white;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <h1>Age Calculator</h1>
+            <div class="calculator">
+                <input type="date" id="date">
+                <button onclick="calculateAge()">Calculate</button>
+            </div>
+        </div>
+        <div id="result">
+            <p></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
