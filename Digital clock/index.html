@@ -53,6 +53,60 @@
             position: absolute;
             right: 45px;
         }
+        @media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        border-width: 6px;
+    }
+
+    span {
+        font-size: 50px;
+        padding: 8px;
+        letter-spacing: 2px;
+    }
+
+    #hrs::after,
+    #min::after,
+    #sec::after {
+        font-size: 12px;
+        bottom: 10px;
+    }
+
+    #hrs::after {
+        right: auto;
+        left: 40px;
+    }
+
+    #min::after {
+        right: auto;
+        left: 140px;
+    }
+
+    #sec::after {
+        right: auto;
+        left: 250px;
+    }
+}
+
+@media (max-width: 400px) {
+    span {
+        font-size: 36px;
+        padding: 5px;
+    }
+
+    #hrs::after {
+        left: 30px;
+    }
+
+    #min::after {
+        left: 100px;
+    }
+
+    #sec::after {
+        left: 180px;
+    }
+}
+
     </style>
 </head>
 <body>
